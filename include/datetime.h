@@ -16,7 +16,7 @@
  * You should have received a copy of the GNU General Public License
  * along with fruhlog. If not, see <http://www.gnu.org/licenses/>.
  */
-//TEST
+
 #ifndef FRUHLOG_DATETIME_H_
 #define FRUHLOG_DATETIME_H_
 
