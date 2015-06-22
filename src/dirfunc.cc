@@ -18,7 +18,7 @@
  */
 
 #include "../include/dirfunc.h"
-
+//TEEEST
 /*
  * mkdirs() creates the folders/subfolders that are passed to it.
  * The mode is defined in the header file
