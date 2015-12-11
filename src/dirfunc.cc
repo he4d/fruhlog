@@ -17,7 +17,8 @@
  * along with fruhlog. If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "../include/dirfunc.h"
+#include <errno.h>
+#include "dirfunc.h"
 
 /*
  * mkdirs() creates the folders/subfolders that are passed to it.

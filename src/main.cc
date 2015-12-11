@@ -18,7 +18,8 @@
  */
 
 #include <unistd.h>
-#include "../include/sensor.h"
+#include <iostream>
+#include "sensor.h"
 
 int main(int argc, char **argv) {
 	if (getuid()) {
@@ -48,4 +49,3 @@ int main(int argc, char **argv) {
 		}
 	}
 }
-

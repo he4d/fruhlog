@@ -17,40 +17,23 @@
  * along with fruhlog. If not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifndef FRUHLOG_SENSOR_H_
-#define FRUHLOG_SENSOR_H_
+#ifndef FRUHLOG_LOGFILE_H_
+#define FRUHLOG_LOGFILE_H_
 
-#include <dirent.h>
-#include <cmath>
-#include <iostream>
-#include <fstream>
-#include <vector>
-#include <string>
-#include "../include/logfile.h"
+#define logpath "/var/log/fruhlog/"
 
-#define gpioPath "/sys/bus/w1/devices/"
-#define baseFile "/w1_slave"
-#define module1 "w1-gpio"
-#define module2 "w1-therm"
-
-class Sensor {
+class Logfile {
 public:
-	explicit Sensor(const std::string &sensorName);
-	~Sensor();
-	void readTempValues();
-	double getTempCelsius() const;
-	double getTempFahrenheit() const;
-	std::string getSensorName() const;
-	void writeLogfile();
+	explicit Logfile(const std::string &sensorName);
+	~Logfile();
+	void createFolderTree();
+	void createCSVFile(const double &temp_c, const double &temp_f);
 private:
-	std::string m_gpioPath;
+	std::string m_directory;
+	std::string m_filename;
 	std::string m_sensorName;
-	double m_tempCelsius;
-	double m_tempFahrenheit;
-	Logfile m_logfile;
 };
 
-bool initSensors(std::vector<Sensor> &allSensors);
-bool loadModules();
-double nround(double value, int n_places);
-#endif  // FRUHLOG_SENSOR_H_
+bool isEmpty(std::fstream *pFile);
+
+#endif  // FRUHLOG_LOGFILE_H_

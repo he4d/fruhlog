@@ -17,7 +17,10 @@
  * along with fruhlog. If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "../include/datetime.h"
+#include <ctime>
+#include <string>
+#include <iostream>
+#include "datetime.h"
 
 /*
  * getDate() simply returns a string with the value, depending on the argument

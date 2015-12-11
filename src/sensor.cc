@@ -16,8 +16,12 @@
  * You should have received a copy of the GNU General Public License
  * along with fruhlog. If not, see <http://www.gnu.org/licenses/>.
  */
-
-#include "../include/sensor.h"
+#include <dirent.h>
+#include <cmath>
+#include <iostream>
+#include <fstream>
+#include <vector>
+#include "sensor.h"
 
 Sensor::Sensor(const std::string &sensorName)
 :

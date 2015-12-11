@@ -16,8 +16,13 @@
  * You should have received a copy of the GNU General Public License
  * along with fruhlog. If not, see <http://www.gnu.org/licenses/>.
  */
-
-#include "../include/logfile.h"
+ 
+#include <iostream>
+#include <fstream>
+#include <string>
+#include "dirfunc.h"
+#include "datetime.h"
+#include "logfile.h"
 
 Logfile::Logfile(const std::string &sensorName)
 :

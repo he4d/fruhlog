@@ -17,19 +17,9 @@
  * along with fruhlog. If not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifndef FRUHLOG_DIRFUNC_H_
-#define FRUHLOG_DIRFUNC_H_
+#ifndef FRUHLOG_DATETIME_H_
+#define FRUHLOG_DATETIME_H_
 
-#include <errno.h>
-#include <sys/stat.h>
+std::string getDate(const char &what);
 
-#define DEFAULT_MODE      S_IRWXU | S_IRGRP |  S_IXGRP | S_IROTH | S_IXOTH
-
-class Dirfunc {
-public:
-  static bool mkdirs(const char *path, mode_t mode = DEFAULT_MODE);
-  static bool direxist(const char *path);
-};
-
-
-#endif  // FRUHLOG_DIRFUNC_H_
+#endif  // FRUHLOG_DATETIME_H_
