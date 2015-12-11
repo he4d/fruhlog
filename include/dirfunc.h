@@ -25,7 +25,11 @@
 
 #define DEFAULT_MODE      S_IRWXU | S_IRGRP |  S_IXGRP | S_IROTH | S_IXOTH
 
-bool mkdirs(const char *path, mode_t mode = DEFAULT_MODE);
-bool direxist(const char *path);
+class Dirfunc {
+public:
+  static bool mkdirs(const char *path, mode_t mode = DEFAULT_MODE);
+  static bool direxist(const char *path);
+};
+
 
 #endif  // FRUHLOG_DIRFUNC_H_

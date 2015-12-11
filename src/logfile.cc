@@ -36,8 +36,8 @@ Logfile::~Logfile()
 void Logfile::createFolderTree() {
 	m_directory = logpath + m_sensorName + "/" +
 			getDate('y') + "/"+getDate('m') + "/";
-	if (!direxist(m_directory.c_str()))
-		if (!mkdirs(m_directory.c_str()))
+	if (!Dirfunc::direxist(m_directory.c_str()))
+		if (!Dirfunc::mkdirs(m_directory.c_str()))
 			std::cerr << "Could not create directories.." << std::endl;
 }
 

@@ -23,7 +23,7 @@
  * mkdirs() creates the folders/subfolders that are passed to it.
  * The mode is defined in the header file
  */
-bool mkdirs(const char *path, mode_t mode) {
+bool Dirfunc::mkdirs(const char *path, mode_t mode) {
 	char* p = const_cast<char*>(path);
 	while (*p != '\0') {
 		p++;
@@ -44,7 +44,7 @@ bool mkdirs(const char *path, mode_t mode) {
  * direxists() simply checks if the passed folder structure exists or not.
  * If yes it returns true, if not false
  */
-bool direxist(const char *path) {
+bool Dirfunc::direxist(const char *path) {
 	struct stat st;
 	if (!stat(path, &st))
 		return true;
